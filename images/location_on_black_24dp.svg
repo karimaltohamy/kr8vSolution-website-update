@@ -1,0 +1,5 @@
+<svg id="location_on_black_24dp" xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+  <path id="Path_245" data-name="Path 245" d="M0,0H68V68H0Z" fill="none"/>
+  <path id="Path_246" data-name="Path 246" d="M24.833,2A19.819,19.819,0,0,0,5,21.833C5,36.708,24.833,58.667,24.833,58.667S44.667,36.708,44.667,21.833A19.819,19.819,0,0,0,24.833,2ZM10.667,21.833a14.167,14.167,0,0,1,28.333,0c0,8.16-8.16,20.372-14.167,27.993C18.94,42.262,10.667,29.908,10.667,21.833Z" transform="translate(9.167 3.667)" fill="#17cc9a"/>
+  <circle id="Ellipse_10" data-name="Ellipse 10" cx="7.083" cy="7.083" r="7.083" transform="translate(26.917 18.417)" fill="#17cc9a"/>
+</svg>
