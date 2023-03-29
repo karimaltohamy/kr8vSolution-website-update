@@ -82,7 +82,7 @@ ul {
 
 /* start header */
 .header {
-  background-color: #1e1e1e;
+  background-color: #0b0b0c;
 }
 
 .header .header-warpper {
@@ -123,8 +123,8 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
   border: 1px solid transparent;
   border-top-color: #17cc9a;
   z-index: 2;
@@ -159,7 +159,7 @@ ul {
 /* start hero */
 .hero {
   height: calc(100vh - 63px);
-  background-color: #1e1e1e;
+  background-color: #0b0b0c;
 }
 
 .hero .container,
@@ -215,7 +215,7 @@ ul {
   transform: translateY(-16px);
 }
 
-.hero .hero-warpper .hero-top h1 span:before {
+/* .hero .hero-warpper .hero-top h1 span:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -226,7 +226,7 @@ ul {
   background-color: #1e1e1e;
   border-left: 3px solid var(--main-color);
   animation: animate 4s steps(12) infinite;
-}
+} */
 
 .hero .hero-warpper .hero-top h1 span .eye-icon {
   position: absolute;
@@ -367,6 +367,13 @@ ul {
   z-index: 2;
   padding: 25px;
   text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.what_we_do .what_we_do-warpper .boxs .box:hover {
+  transform: scale(0.9);
 }
 
 .what_we_do .what_we_do-warpper .boxs .box .image {
