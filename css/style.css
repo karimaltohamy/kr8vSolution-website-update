@@ -11,6 +11,10 @@
   --gary-color: #6a6a6a;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: white !important;
