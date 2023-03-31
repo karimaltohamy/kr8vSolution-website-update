@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -1007,6 +1007,130 @@ footer .footer-warp .right .information-contact span {
 
 #model-menu .model-bg .header-model svg {
   width: 35px;
+  cursor: pointer;
+}
+
+#model-menu .model-bg .content-model {
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#model-menu .model-bg .content-model .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+
+#model-menu .model-bg .content-model .links .link {
+  font-weight: 700;
+  font-size: 35px;
+  color: #222;
+  position: relative;
+}
+
+#model-menu .model-bg .content-model .links .link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #222;
+  transition: all 0.4s;
+}
+
+#model-menu .model-bg .content-model .links .link:hover::before {
+  width: 100%;
+}
+
+#model-menu .model-bg .content-model .social-continer button {
+  background: linear-gradient(29deg, #17cc9a 24%, #694fe9 75%);
+  padding: 5px 45px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+}
+
+#model-menu .model-bg .content-model .social-continer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#model-menu .model-bg .content-model .social-continer .social a {
+  color: black;
+}
+
+#model-menu .model-bg .content-model .social-continer .social a i {
+  font-size: 20px;
+}
+
+#model-menu .model-bg .footer-model {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+#model-menu .model-bg .footer-model p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#model-menu .model-bg .footer-model .copyRight {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  #model-menu .model-bg .content-model {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  #model-menu .model-bg .content-model .links {
+    gap: 10px;
+    align-items: center;
+  }
+
+  #model-menu .model-bg .content-model .links .link {
+    font-size: 20px;
+  }
+
+  #model-menu .model-bg .content-model .social-continer button {
+    padding: 3px 35px;
+    font-size: 18px;
+  }
+
+  #model-menu .model-bg .content-model .social-continer .social {
+    gap: 20px;
+  }
+
+  #model-menu .model-bg .content-model .social-continer .social a i {
+    font-size: 18px;
+  }
+
+  #model-menu .model-bg .footer-model {
+    flex-direction: column;
+  }
+
+  #model-menu .model-bg .footer-model p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  #model-menu .model-bg .footer-model .copyRight {
+    font-size: 12px;
+  }
 }
 /* end model menu */
 
