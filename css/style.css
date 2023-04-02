@@ -89,6 +89,13 @@ ul {
   background-color: #0b0b0c;
 }
 
+.header.header-scroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
 .header .header-warpper {
   display: flex;
   align-items: center;
@@ -610,6 +617,151 @@ ul {
 }
 /* end features */
 
+/* start portfolio */
+
+.portfolio {
+  height: 100vh;
+}
+
+.portfolio .horizontal-scroll {
+  height: 100%;
+}
+
+.complex-scroll-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.complex-scroll-container .scroll {
+  position: absolute;
+  width: 100vw;
+  top: 5rem;
+  left: 0;
+  overflow-x: clip;
+  overflow-y: hidden;
+}
+
+.complex-scroll-container .scroll.position-fix {
+  position: fixed;
+  z-index: 4;
+  top: 5rem;
+  overflow-x: scroll;
+}
+
+.complex-scroll-container .horizontal-content {
+  width: 700vw;
+  height: calc(100vh - 5rem);
+  display: flex;
+}
+
+.complex-scroll-container .horizontal-content > div {
+  position: relative;
+  border-left: 0.1em solid #c4c4c480;
+  height: 100%;
+  width: 25vw;
+  background: #fff;
+  z-index: 4;
+}
+
+.complex-scroll-container .horizontal-content div:nth-child(2):hover {
+  background: linear-gradient(180deg, #000000 0%, #0d0202 100%);
+}
+
+.complex-scroll-container .horizontal-content div:nth-child(2):hover {
+  background: linear-gradient(180deg, #000000 0%, #0d0202 100%);
+}
+.complex-scroll-container .horizontal-content div:nth-child(3):hover {
+  background: linear-gradient(180deg, #f2f58a 0%, #a1a603d4 100%);
+}
+.complex-scroll-container .horizontal-content div:nth-child(4):hover {
+  background: linear-gradient(180deg, #26549f 0%, #377af5 100%);
+}
+.complex-scroll-container .horizontal-content div:nth-child(5):hover {
+  background: linear-gradient(180deg, #c33c2b 0%, #1d2e70 100%);
+}
+.complex-scroll-container .horizontal-content div:nth-child(6):hover {
+  background: linear-gradient(180deg, #a9803c 0%, #66440c 100%);
+}
+.complex-scroll-container .horizontal-content div:nth-child(7):hover {
+  background: linear-gradient(180deg, #1a1a1a 0%, #2c2b2b 100%);
+}
+
+.complex-scroll-container .horizontal-content .start {
+  background: linear-gradient(69deg, #2b47f0 24%, #dd4fe9 75%);
+}
+
+.complex-scroll-container .horizontal-content div h2 {
+  position: relative;
+  display: block;
+  text-align: center;
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.1em;
+  transition: all 0.3s 0.1s ease-in-out, color 0s;
+  color: #000;
+}
+
+.complex-scroll-container .horizontal-content .start h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.complex-scroll-container .horizontal-content .portfolio:hover h2 {
+  color: #fff;
+  top: 15%;
+  transform: translate(0%, 0%);
+  transition: all 0.3s ease-in-out;
+}
+
+.complex-scroll-container .horizontal-content div span {
+  position: relative;
+  display: block;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  transition: all 0.3s 0.05s ease-in-out, color 0s;
+  color: #000;
+}
+
+.complex-scroll-container .horizontal-content .portfolio:hover span {
+  color: #fff;
+  top: 15%;
+  transform: translate(-50%, 0%);
+  transition: all 0.3s 0.05s ease-in-out;
+}
+
+.complex-scroll-container .horizontal-content div .image {
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.complex-scroll-container .horizontal-content .portfolio:hover .image {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s 0.05s ease-in-out;
+  pointer-events: none;
+  width: 100%;
+}
+
+.complex-scroll-container .horizontal-content div img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+/* end portfolio */
+
 /* start our_latest_work */
 .our_latest_work {
   padding: 100px 0;
@@ -972,7 +1124,7 @@ footer .footer-warp .right .information-contact span {
   top: 0;
   left: 0;
   transform: scale(0);
-  z-index: 10;
+  z-index: 999;
   background: rgb(255 255 255);
 }
 
