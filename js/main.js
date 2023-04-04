@@ -24,12 +24,12 @@ window.onscroll = function () {
 // portfolio btn end
 
 // const btnEnd = document.querySelector(".btn-end");
-const nextSection = document.querySelector(".our_latest_work");
+// const nextSection = document.querySelector(".our_latest_work");
 
-console.log(nextSection.scrollTop);
+// console.log(nextSection.scrollTop);
 
-const horizontalScrollContainer = document.querySelector(".scroll");
-const content = document.getElementById("content");
+// const horizontalScrollContainer = document.querySelector(".scroll");
+// const content = document.getElementById("content");
 
 // window.addEventListener("scroll", function () {
 //   const scrollPosition = window.pageYOffset;
