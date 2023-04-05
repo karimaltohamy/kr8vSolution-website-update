@@ -8,10 +8,11 @@ tween = gsap.to(panels, {
   xPercent: 100,
   x: () => -innerWidth,
   ease: "none",
+  width: 250 * 11,
   scrollTrigger: {
     trigger: "#panels-container",
     start: "top top",
-    end: () => innerWidth * 3,
+    end: () => innerWidth * 4,
     scrub: 1,
     pin: true,
     invalidateOnRefresh: true,
