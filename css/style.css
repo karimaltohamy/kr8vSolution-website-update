@@ -117,7 +117,7 @@ ul {
   border-radius: 50px;
   border: none;
   color: white;
-  background: linear-gradient(29deg, #2b47f0 24%, #dd4fe9 75%);
+  background: linear-gradient(29deg, var(--main-color) 24%, #dd4fe9 75%);
 }
 
 .header .header-warpper .menu .menu-icon {
