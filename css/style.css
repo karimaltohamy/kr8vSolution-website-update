@@ -112,8 +112,12 @@ ul {
   gap: 15px;
 }
 
-.header .header-warpper .menu span {
-  font-size: 0.8rem;
+.header .header-warpper .menu button {
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: linear-gradient(29deg, #2b47f0 24%, #dd4fe9 75%);
 }
 
 .header .header-warpper .menu .menu-icon {
@@ -149,6 +153,11 @@ ul {
 @media (max-width: 768px) {
   .header .header-warpper .logo svg {
     width: 70px;
+  }
+
+  .header .header-warpper .menu button {
+    padding: 4px 10px;
+    font-size: 14px;
   }
 
   .header .header-warpper .menu .menu-icon {
