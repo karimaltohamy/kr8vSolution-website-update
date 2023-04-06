@@ -25,7 +25,8 @@ const swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 0,
   mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
 });
