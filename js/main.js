@@ -21,17 +21,11 @@ window.onscroll = function () {
   }
 };
 
-// portfolio btn end
-
-// const btnEnd = document.querySelector(".btn-end");
-// const nextSection = document.querySelector(".our_latest_work");
-
-// console.log(nextSection.scrollTop);
-
-// const horizontalScrollContainer = document.querySelector(".scroll");
-// const content = document.getElementById("content");
-
-// window.addEventListener("scroll", function () {
-//   const scrollPosition = window.pageYOffset;
-//   horizontalScrollContainer.scrollLeft = -scrollPosition;
-// });
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 0,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});

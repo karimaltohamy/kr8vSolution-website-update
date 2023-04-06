@@ -627,7 +627,8 @@ ul {
   overflow: hidden;
 }
 
-.portfolio .horizontal-content > div {
+.portfolio .horizontal-content > div,
+.portfolio .swiper-container .swiper-slide > div {
   position: relative;
   border-left: 0.1em solid #c4c4c480;
   height: 100%;
@@ -678,11 +679,14 @@ ul {
 }
 
 .portfolio .horizontal-content .start,
-.portfolio .horizontal-content .end {
+.portfolio .horizontal-content .end,
+.portfolio .swiper-container .swiper-slide .start,
+.portfolio .swiper-container .swiper-slide .end {
   background: linear-gradient(69deg, #2b47f0 24%, #dd4fe9 75%);
 }
 
-.portfolio .horizontal-content div h2 {
+.portfolio .horizontal-content div h2,
+.portfolio .swiper-container .swiper-slide div h2 {
   position: relative;
   display: block;
   text-align: center;
@@ -696,19 +700,23 @@ ul {
 }
 
 .portfolio .horizontal-content .start h2,
-.portfolio .horizontal-content .end h2 {
+.portfolio .horizontal-content .end h2,
+.portfolio .swiper-container .swiper-slide .start h2,
+.portfolio .swiper-container .swiper-slide .end h2 {
   color: #fff;
   font-size: 2rem;
 }
 
-.portfolio .horizontal-content .portfolio:hover h2 {
+.portfolio .horizontal-content .portfolio:hover h2,
+.portfolio .swiper-container .swiper-slide .portfolio:hover h2 {
   color: #fff;
   top: 15%;
   transform: translate(0%, 0%);
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio .horizontal-content div span {
+.portfolio .horizontal-content div span,
+.portfolio .swiper-container .swiper-slide div span {
   position: relative;
   display: block;
   text-align: center;
@@ -721,14 +729,16 @@ ul {
   color: #000;
 }
 
-.portfolio .horizontal-content .portfolio:hover span {
+.portfolio .horizontal-content .portfolio:hover span,
+.portfolio .swiper-container .swiper-slide .portfolio:hover span {
   color: #fff;
   top: 15%;
   transform: translate(-50%, 0%);
   transition: all 0.3s 0.05s ease-in-out;
 }
 
-.portfolio .horizontal-content div .image {
+.portfolio .horizontal-content div .image,
+.portfolio .swiper-container .swiper-slide div .image {
   position: absolute;
   left: 0;
   bottom: 0%;
@@ -737,7 +747,8 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio .horizontal-content .portfolio:hover .image {
+.portfolio .horizontal-content .portfolio:hover .image,
+.portfolio .swiper-container .swiper-slide .portfolio:hover .image {
   opacity: 1;
   transform: scale(1);
   transition: all 0.3s 0.05s ease-in-out;
@@ -745,13 +756,80 @@ ul {
   width: 100%;
 }
 
-.portfolio .horizontal-content div img {
+.portfolio .horizontal-content div img,
+.portfolio .swiper-container .swiper-slide div img {
   width: 100%;
   height: auto;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0%);
 }
+
+.portfolio .swiper-container {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .portfolio .horizontal-content {
+    display: none;
+  }
+
+  .portfolio .swiper-container {
+    display: block;
+  }
+
+  .portfolio .swiper-container .swiper-slide {
+    height: 50vh;
+  }
+
+  .portfolio .swiper-container .swiper-slide .one:hover {
+    background: linear-gradient(180deg, #26549f 0%, #377af5 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .two:hover {
+    background: linear-gradient(180deg, #f2f58a 0%, #a1a603d4 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .three:hover {
+    background: linear-gradient(180deg, #c33c2b 0%, #1d2e70 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .four:hover {
+    background: linear-gradient(180deg, #a9803c 0%, #66440c 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .five:hover {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2c2b2b 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .six:hover {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2c2b2b 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .seven:hover {
+    background: linear-gradient(180deg, #f2f58a 0%, #a1a603d4 100%);
+  }
+  .portfolio .swiper-container .swiper-slide .eight:hover {
+    background: linear-gradient(180deg, #26549f 0%, #377af5 100%);
+  }
+
+  .portfolio .swiper-container .swiper-slide > div {
+    width: auto;
+    border: none;
+  }
+
+  .portfolio .swiper-container .swiper-slide .start h2,
+  .portfolio .swiper-container .swiper-slide .end h2 {
+    font-size: 22px !important;
+  }
+
+  .portfolio .swiper-container .swiper-slide div h2 {
+    font-size: 20px;
+  }
+
+  .portfolio .swiper-container .swiper-slide div span {
+    font-size: 12px;
+  }
+
+  .portfolio .swiper-container .swiper-slide div img {
+    width: 80%;
+  }
+}
+
 /* end portfolio */
 
 /* start our_latest_work */
