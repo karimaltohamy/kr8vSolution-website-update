@@ -691,7 +691,7 @@ ul {
 .portfolio .horizontal-content .end,
 .portfolio .swiper-container .swiper-slide .start,
 .portfolio .swiper-container .swiper-slide .end {
-  background: linear-gradient(69deg, #2b47f0 24%, #dd4fe9 75%);
+  background: linear-gradient(69deg, var(--main-color) 24%, #dd4fe9 75%);
 }
 
 .portfolio .horizontal-content div h2,
