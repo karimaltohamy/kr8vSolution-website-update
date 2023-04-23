@@ -1,0 +1,46 @@
+$primary-color: #17cc9a;
+
+// start secound hero
+.secound_hero {
+  height: 250px;
+  background-image: url(../images/secound-hero.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 20px;
+
+      a {
+        &:nth-child(2) {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+}
+// end secound hero
