@@ -1,5 +1,6 @@
 $primary-color: #17cc9a;
 $gray-color: #6a6a6a;
+$secound-bg: #0e0e0e;
 
 // start about_area
 .about_area {
@@ -9,6 +10,8 @@ $gray-color: #6a6a6a;
   .line {
     display: flex;
     gap: 40px;
+    position: relative;
+    z-index: 10;
 
     .left,
     .right {
@@ -181,9 +184,19 @@ $gray-color: #6a6a6a;
 
     .left {
       .image {
+        overflow: hidden;
+        border-radius: 15px;
+
+        &:hover {
+          img {
+            transform: scale(1.1) !important;
+            filter: blur(2px);
+          }
+        }
         img {
           width: 100%;
-          border-radius: 15px;
+          transform: scale(1);
+          transition: all 0.4s;
         }
       }
     }
@@ -297,6 +310,7 @@ $gray-color: #6a6a6a;
       margin-top: 15px;
 
       .boxs {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         .box {
           h4 {
             font-size: 19px;
@@ -345,6 +359,48 @@ $gray-color: #6a6a6a;
 
     .left {
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .about_main-img {
+        animation: scale_up_down 3s infinite alternate both;
+        text-align: center;
+        z-index: 5;
+
+        img {
+          box-shadow: 0px 16px 20px 10px rgba(1, 16, 61, 0.1);
+          border-radius: 20px;
+        }
+      }
+
+      .about__sub-img-1 {
+        position: absolute;
+        bottom: 3%;
+        left: 42%;
+        animation: tptranslateY2 4s forwards infinite alternate;
+        z-index: 7;
+
+        img {
+          box-shadow: 10px 40px 40px rgba(1, 16, 61, 0.06),
+            -20px -20px 120px rgba(1, 16, 61, 0.12);
+          border-radius: 20px;
+        }
+      }
+
+      .about__sub-img-2 {
+        position: absolute;
+        top: -4%;
+        left: 5%;
+        animation: tptranslateX2 4s forwards infinite alternate;
+        z-index: 2;
+
+        img {
+          box-shadow: 10px 40px 40px rgba(1, 16, 61, 0.06),
+            -20px -20px 120px rgba(1, 16, 61, 0.12);
+          border-radius: 20px;
+        }
+      }
 
       .about_sub-img-3 {
         position: absolute;
@@ -365,7 +421,7 @@ $gray-color: #6a6a6a;
         z-index: -5;
 
         img {
-          max-width: 100%;
+          max-width: 110%;
         }
       }
     }
@@ -423,14 +479,471 @@ $gray-color: #6a6a6a;
     }
   }
 }
-// end client_data
 
-// animation
-@keyframes rotateme {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .client_data {
+    .line {
+      flex-direction: column;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        height: 350px;
+
+        .about_main-img {
+          img {
+            width: 100%;
+          }
+        }
+
+        .about__sub-img-1 {
+          left: 63%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .about__sub-img-2 {
+          img {
+            width: 65%;
+          }
+        }
+
+        .about_sub-img-3 {
+          z-index: 10;
+
+          img {
+            height: 145px;
+            width: 130px;
+          }
+        }
+      }
+
+      .right {
+        text-align: center;
+
+        .subtitle {
+          margin-bottom: 3px;
+          font-size: 14px;
+        }
+
+        .title {
+          font-size: 22px;
+        }
+
+        .desc {
+          font-size: 14px;
+        }
+
+        .features_section {
+          margin-top: 10px;
+          .feature {
+            margin-bottom: 5px;
+
+            i {
+              height: 15px;
+              width: 15px;
+              line-height: 15px;
+
+              font-size: 10px;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .btn_contact {
+          padding: 5px 15px;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+      }
+    }
   }
 }
+// end client_data
+
+// start why_choose_us
+.why_choose_us {
+  padding: 60px 0;
+  background-color: $secound-bg;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 10;
+
+    .subtitle {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 19px;
+      display: block;
+      text-align: center;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 35px;
+      margin: 5px auto 10px;
+      font-weight: 700;
+      max-width: 700px;
+
+      span {
+        background: radial-gradient(
+          circle,
+          #a66bff,
+          #c666ef,
+          #dd62df,
+          #ee61cf,
+          #fb64bf
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .desc {
+      font-size: 17px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 0;
+    }
+
+    .boxs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+
+      .box {
+        img {
+          margin-bottom: 10px;
+        }
+
+        h4 {
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 17px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .choose-shape-1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .why_choose_us {
+    padding: 30px 0;
+
+    .container {
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .title {
+        font-size: 22px;
+        margin: 3px auto 5px;
+      }
+
+      .desc {
+        font-size: 12px;
+      }
+
+      .boxs {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        .box {
+          text-align: center;
+
+          img {
+            width: 100px;
+            margin-bottom: 8px;
+          }
+
+          h4 {
+            font-size: 19px;
+            margin-bottom: 4px;
+          }
+
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+// end why_choose_us
+
+// start skillset_section
+.skillset_section {
+  padding: 60px 0;
+
+  .line {
+    display: flex;
+    gap: 40px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      .subtitle {
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 15px;
+        color: #17cc9a;
+      }
+
+      .title {
+        font-size: 40px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .skill_bar {
+        margin-top: 25px;
+
+        &:nth-of-type(1) {
+          .progress_content_outter {
+            border: 1px solid #3e019a;
+            .progress_content {
+              width: 90%;
+              background-color: #3e019a;
+
+              &::before {
+                content: "90%";
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          .progress_content_outter {
+            border: 1px solid #d5158f;
+            .progress_content {
+              width: 80%;
+              background-color: #d5158f;
+
+              &::before {
+                content: "80%";
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          .progress_content_outter {
+            border: 1px solid #feb302;
+            .progress_content {
+              width: 70%;
+              background-color: #feb302;
+
+              &::before {
+                content: "70%";
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          .progress_content_outter {
+            border: 1px solid #a66bff;
+            .progress_content {
+              width: 45%;
+              background-color: #a66bff;
+
+              &::before {
+                content: "45%";
+              }
+            }
+          }
+        }
+
+        .progress_title {
+          margin-bottom: 10px;
+          font-weight: 600;
+          font-size: 18px;
+        }
+
+        .progress_content_outter {
+          height: 15px;
+          background-color: transparent;
+          border-radius: 40px;
+          position: relative;
+
+          .progress_content {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            height: 5px;
+            border-radius: 40px;
+
+            &::before {
+              font-weight: 600;
+              font-size: 17px;
+              position: absolute;
+              right: 0;
+              top: -30px;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+      .image {
+        text-align: center;
+        img {
+          width: 75%;
+        }
+      }
+
+      .skill-shape-1 {
+        position: absolute;
+        right: 55px;
+        top: -15px;
+
+        img {
+          animation: rotateme 5s linear infinite;
+        }
+      }
+
+      .skill-shape-2 {
+        position: absolute;
+        left: 55px;
+        bottom: -15px;
+
+        img {
+          animation: rotateme 5s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skillset_section {
+    .line {
+      flex-direction: column;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        text-align: center;
+
+        .subtitle {
+          margin-bottom: 2px;
+          font-size: 14px;
+        }
+
+        .title {
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+
+        .skill_bar {
+          margin-top: 10px;
+          .progress_title {
+            margin-bottom: 20px;
+            font-size: 15px;
+          }
+
+          .progress_content_outter {
+            height: 11px;
+
+            .progress_content {
+              height: 4px;
+
+              &::before {
+                font-size: 13px;
+                top: -23px;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        .skill-shape-1 {
+          right: 0;
+
+          img {
+            width: 80px;
+          }
+        }
+
+        .skill-shape-2 {
+          left: 0;
+
+          img {
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+// end skillset_section
+
+// animation
+
+// scale_up_down
+@keyframes scale_up_down {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// tptranslateX2
+@keyframes tptranslateX2 {
+  0% {
+    transform: translateX(-30px);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+// tptranslateY2
+@keyframes tptranslateY2 {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+// end animation

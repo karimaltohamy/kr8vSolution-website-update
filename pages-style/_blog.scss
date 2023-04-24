@@ -1,0 +1,248 @@
+$primary-color: #17cc9a;
+$gray-color: #6a6a6a;
+$secound-bg: #0e0e0e;
+
+// start blog_section
+.blog_section {
+  padding: 70px 0;
+
+  .subtitle {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+    color: #17cc9a;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 15px;
+
+    span {
+      background: radial-gradient(
+        circle,
+        #a66bff,
+        #c666ef,
+        #dd62df,
+        #ee61cf,
+        #fb64bf
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .blog_sorting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    .input_search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: $secound-bg;
+      border-radius: 15px;
+      height: 60px;
+      width: 350px;
+      padding: 0 15px;
+      color: white;
+
+      i {
+        font-size: 20px;
+      }
+
+      input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: white;
+      }
+    }
+
+    select {
+      height: 60px;
+      width: 300px;
+      background: $secound-bg;
+      border-radius: 15px;
+      color: white;
+      padding: 0 15px;
+      border: none;
+
+      option {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .line {
+    margin-top: 50px;
+    .blog_post {
+      display: flex;
+      gap: 15px;
+      cursor: pointer;
+      margin-bottom: 20px;
+
+      &:hover {
+        .image {
+          img {
+            transform: scale(1.1);
+            filter: blur(2px);
+          }
+        }
+
+        .text {
+          .date {
+            background: radial-gradient(
+              circle,
+              #a66bff,
+              #c666ef,
+              #dd62df,
+              #ee61cf,
+              #fb64bf
+            );
+          }
+
+          .title_post {
+            color: $primary-color !important;
+          }
+        }
+      }
+
+      .image {
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all 0.4s;
+        }
+      }
+
+      .text {
+        .date {
+          padding: 12px 25px;
+          border-radius: 50px;
+          margin-bottom: 20px;
+          transition: all 0.4s ease;
+          display: inline-block;
+          font-weight: 600;
+          box-shadow: -1px 0px 8px rgb(101 101 101 / 37%);
+        }
+
+        .title_post {
+          font-size: 23px;
+          line-height: 1.5;
+          display: block;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+
+        .desc {
+          font-weight: 600;
+          line-height: 1.8;
+          margin-bottom: 10px;
+          font-size: 17px;
+        }
+
+        .btn_more {
+          font-weight: 600;
+          background: radial-gradient(
+            circle,
+            #feb302,
+            #f8c600,
+            #eed900,
+            #e0ec00,
+            #cdff05
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-top: 20px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog_section {
+    padding: 30px 0;
+
+    .subtitle {
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .title {
+      font-size: 22px;
+    }
+
+    .blog_sorting {
+      margin-top: 15px;
+      flex-direction: column;
+      gap: 10px;
+
+      .input_search {
+        height: 40px;
+        width: 300px;
+        border-radius: 10px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+
+      select {
+        height: 40px;
+        width: 250px;
+      }
+    }
+
+    .line {
+      .blog_post {
+        flex-direction: column;
+
+        .image {
+          height: 250px;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        .text {
+          .date {
+            padding: 10px;
+            margin-bottom: 6px;
+            font-size: 13px;
+          }
+
+          .title_post {
+            font-size: 19px;
+            line-height: 1.3;
+          }
+
+          .desc {
+            font-size: 13px;
+            margin-bottom: 0;
+          }
+
+          .btn_more {
+            font-size: 15px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// end blog_section
