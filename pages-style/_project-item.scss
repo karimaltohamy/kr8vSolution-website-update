@@ -1,0 +1,147 @@
+$primary-color: #17cc9a;
+$gray-color: #6a6a6a;
+$secound-bg: #0e0e0e;
+
+// start project_details
+.project_details {
+  padding: 60px 0;
+
+  .image {
+    border-radius: 15px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+
+    .left {
+      width: 70%;
+
+      .images_container {
+        margin-top: 10px;
+
+        .images {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          flex-wrap: wrap;
+
+          img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 30%;
+      padding: 30px;
+      background-color: $secound-bg;
+      border-radius: 10px;
+      height: fit-content;
+
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        p {
+          margin-bottom: 0;
+          color: $gray-color;
+          font-size: 17px;
+
+          i {
+            margin-right: 5px;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project_details {
+    padding: 30px 0;
+
+    .image {
+      height: 250px;
+    }
+
+    .content {
+      flex-direction: column;
+      margin-top: 10px;
+      gap: 20px;
+      text-align: center;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        h3 {
+          font-size: 20px;
+          margin-bottom: 3px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+
+        .images_container {
+          margin-top: 5px;
+
+          h5 {
+            font-size: 17px;
+          }
+
+          .images {
+            gap: 10px;
+            justify-content: center;
+
+            img {
+              width: 100px;
+              height: 100px;
+            }
+          }
+        }
+      }
+
+      .right {
+        padding: 15px;
+
+        .item {
+          span {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+
+            i {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end project_details
