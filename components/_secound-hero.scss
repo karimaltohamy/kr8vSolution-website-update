@@ -36,7 +36,7 @@ $primary-color: #17cc9a;
       font-size: 20px;
 
       a {
-        &:nth-child(2) {
+        &:last-child {
           color: $primary-color !important;
         }
       }

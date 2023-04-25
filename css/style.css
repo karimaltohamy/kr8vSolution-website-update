@@ -39,7 +39,7 @@
 .secound_hero .container p {
   font-size: 20px;
 }
-.secound_hero .container p a:nth-child(2) {
+.secound_hero .container p a:last-child {
   color: #17cc9a !important;
 }
 
