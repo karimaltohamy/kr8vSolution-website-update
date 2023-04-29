@@ -30,3 +30,12 @@ const swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
 });
+// fixed menu icon
+const menuIcon = document.querySelector(".menu_icon");
+window.onscroll = function () {
+  if (window.scrollY > 10) {
+    menuIcon.classList.add("fixed");
+  } else {
+    menuIcon.classList.remove("fixed");
+  }
+};

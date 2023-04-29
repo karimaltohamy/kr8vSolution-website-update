@@ -23,6 +23,18 @@ body {
   overflow-x: hidden !important;
 }
 
+body::before {
+  content: "Kr8Solution";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11em;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #555;
+}
+
 a {
   text-decoration: none !important;
   color: inherit;
