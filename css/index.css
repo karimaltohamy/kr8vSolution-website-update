@@ -1331,11 +1331,13 @@ footer .footer-warp .right .information-contact span {
   align-items: center;
   justify-content: space-between;
   color: black;
+  margin-top: 10px;
 }
 
 #model-menu .model-bg .footer-model p {
   font-size: 25px;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 #model-menu .model-bg .footer-model .copyRight {
