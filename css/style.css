@@ -43,6 +43,12 @@
   color: #17cc9a !important;
 }
 
+@media (max-width: 768px) {
+  .secound_hero .container h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+}
 .about_area {
   padding: 60px 0;
   position: relative;
@@ -2668,6 +2674,17 @@ p {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .inner_cursor.grow-video-1, .inner_cursor.grow-video-2, .inner_cursor.grow-video-3 {
+    display: none !important;
+  }
+  .inner_cursor video {
+    display: none !important;
+  }
+  .inner_cursor video .grow {
+    display: none !important;
+  }
+}
 .secound_header {
   margin-top: 40px;
 }
