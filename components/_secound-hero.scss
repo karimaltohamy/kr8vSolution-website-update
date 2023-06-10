@@ -43,4 +43,15 @@ $primary-color: #17cc9a;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .secound_hero {
+    .container {
+      h1 {
+        font-size: 32px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 // end secound hero
