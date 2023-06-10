@@ -45,8 +45,11 @@
 
 @media (max-width: 768px) {
   .secound_hero .container h1 {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 0;
+  }
+  .secound_hero .container p {
+    font-size: 16px;
   }
 }
 .about_area {

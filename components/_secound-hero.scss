@@ -48,8 +48,12 @@ $primary-color: #17cc9a;
   .secound_hero {
     .container {
       h1 {
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 0;
+      }
+
+      p {
+        font-size: 16px;
       }
     }
   }
